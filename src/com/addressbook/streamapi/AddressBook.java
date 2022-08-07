@@ -39,6 +39,10 @@ public class AddressBook {
 
 	// edit exiting contact -uc3
 	private Contact editContact(String fName) {
+		if(contact==null) {
+			System.out.print(" Address book is ");
+			return contact;
+		}
 		if (contact.getFirstName().equals(fName)) {
 			System.out.print("Enter First Name  : ");
 			String firstName = scanner.next();
@@ -80,24 +84,24 @@ public class AddressBook {
 		addressBook = new AddressBook();
 		String exit = "n";
 		while (exit != "y") {
-			System.out.println("Enter 1 to add new Contact ");
-			System.out.println("Enter 2 to update existing contact ");
-			System.out.println("Enter 3 to Exit ");
-			System.out.print("Enter option : ");
+			System.out.println("\n Enter 1 to add new Contact ");
+			System.out.println(" Enter 2 to update existing contact ");
+			System.out.println(" Enter 3 to Exit ");
+			System.out.print(" Enter option : ");
 			int input = scanner.nextInt();
 			switch (input) {
 			case 1:
-				System.out.println(":::::: add Contact ::::::");
+				System.out.println(" :::::: add Contact ::::::");
 				System.out.println(addressBook.addContact());
 				break;
 			case 2:
-				System.out.println(":::::: edit Contact ::::::");
+				System.out.println(" :::::: edit Contact ::::::");
 				System.out.print(" Enter first name to edit contact ");
 				String firstName = scanner.next();
 				System.out.println(addressBook.editContact(firstName));
 				break;
 			case 3:
-				System.out.println(":::::: exit from address book ::::::");
+				System.out.println(" :::::: exit from address book ::::::");
 				exit = "y";
 				break;
 			}
