@@ -61,7 +61,7 @@ public class AddressBook {
 
 			System.out.print("Enter State  : ");
 			String state = scanner.next();
-			
+
 			System.out.print(" Enter email");
 			String email = scanner.next();
 
@@ -85,6 +85,7 @@ public class AddressBook {
 		return contact;
 	}
 
+	// delete existing Contact -uc4
 	public Contact deleteContact(String fName) {
 		if (contact == null) {
 			System.out.print(" Address book is ");
@@ -122,7 +123,7 @@ public class AddressBook {
 			System.out.println(" Enter 2 to update existing contact ");
 			System.out.println(" Enter 3 to delete existing contact ");
 			System.out.println(" Enter 4 to Exit ");
-			
+
 			System.out.print(" Enter option : ");
 			int input = scanner.nextInt();
 			switch (input) {
@@ -149,7 +150,5 @@ public class AddressBook {
 			}
 		}
 		System.out.println("exited ");
-
 	}
-
 }
