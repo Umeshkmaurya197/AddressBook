@@ -120,7 +120,7 @@ public class AddressBook {
 		String exit = "n";
 		while (exit != "y") {
 			System.out.println("\n Enter 1 to add new Contact ");
-			System.out.println(" Enter 2 to update existing contact ");
+			System.out.println(" Enter 2 to edit existing contact ");
 			System.out.println(" Enter 3 to delete existing contact ");
 			System.out.println(" Enter 4 to Exit ");
 
@@ -138,7 +138,7 @@ public class AddressBook {
 				System.out.println(addressBook.editContact(firstName));
 				break;
 			case 3:
-				System.out.println(" :::::: edit Contact :::::: ");
+				System.out.println(" :::::: delete Contact :::::: ");
 				System.out.print(" Enter first name to delete contact ");
 				String firstName1 = scanner.next();
 				System.out.println(addressBook.deleteContact(firstName1));
