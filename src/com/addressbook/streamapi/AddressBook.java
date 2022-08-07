@@ -7,7 +7,7 @@ public class AddressBook {
 	private static Scanner scanner = new Scanner(System.in);
 	static AddressBook addressBook;
 
-	// add new Contact -uc1
+	// add new Contact -uc2
 	public Contact addContact() {
 		System.out.print("Enter id  : ");
 		int id = scanner.nextInt();
@@ -37,7 +37,7 @@ public class AddressBook {
 		return contact;
 	}
 
-	// edit exiting contact -uc2
+	// edit exiting contact -uc3
 	private Contact editContact(String fName) {
 		if (contact.getFirstName().equals(fName)) {
 			System.out.print("Enter First Name  : ");
