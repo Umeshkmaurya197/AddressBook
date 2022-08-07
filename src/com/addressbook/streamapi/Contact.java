@@ -1,20 +1,20 @@
 package com.addressbook.streamapi;
 
 public class Contact {
-	private String id;
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String address;
 	private String city;
 	private String state;
 	private String email;
-	private String zip;
+	private int zip;
 	private String phoneNumber;
 	public Contact() {
 		super();
 	}
-	public Contact(String id, String firstName, String lastName, String address, String city, String state,
-			String email, String zip, String phoneNumber) {
+	public Contact(int id, String firstName, String lastName, String address, String city, String state,
+			String email, int zip, String phoneNumber) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -26,10 +26,10 @@ public class Contact {
 		this.zip = zip;
 		this.phoneNumber = phoneNumber;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -68,10 +68,10 @@ public class Contact {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getZip() {
+	public int getZip() {
 		return zip;
 	}
-	public void setZip(String zip) {
+	public void setZip(int zip) {
 		this.zip = zip;
 	}
 	public String getPhoneNumber() {
@@ -82,9 +82,15 @@ public class Contact {
 	}
 	@Override
 	public String toString() {
-		return "Contact [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
-				+ ", city=" + city + ", state=" + state + ", email=" + email + ", zip=" + zip + ", phoneNumber="
-				+ phoneNumber + "]";
+		return " \n Contact id = " + id + ",\n"
+				+ " FirstName = " + firstName + ",\n"
+						+ " LastName = " + lastName + ",\n"
+								+ " Address =" + address+ ",\n"
+										+ " City = " + city + ",\n"
+												+ " State = " + state + ",\n"
+														+ " Email = " + email + ",\n"
+																+ " Zip = " + zip + ",\n"
+																		+ " PhoneNumber = "+ phoneNumber + "]\n";
 	}
 	
 
