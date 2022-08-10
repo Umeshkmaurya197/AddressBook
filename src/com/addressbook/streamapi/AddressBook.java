@@ -3,7 +3,6 @@ package com.addressbook.streamapi;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 public class AddressBook {
@@ -68,49 +67,49 @@ public class AddressBook {
 					System.out.print(" Enter the new first name : ");
 					String fName = scannerStr.nextLine();
 					c.setFirstName(fName);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 2:
 					System.out.print(" Enter the new last name : ");
 					String LName = scannerStr.nextLine();
 					c.setLastName(LName);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 3:
 					System.out.print(" Enter the new address : ");
 					String address = scannerStr.nextLine();
 					c.setAddress(address);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 4:
 					System.out.print(" Enter the new city : ");
 					String city = scannerStr.nextLine();
 					c.setCity(city);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 5:
 					System.out.print(" Enter the new state : ");
 					String state = scannerStr.nextLine();
 					c.setState(state);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 6:
 					System.out.print(" Enter the new email : ");
 					String email = scannerStr.nextLine();
 					c.setEmail(email);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 7:
 					System.out.print(" Enter the new zip : ");
 					int zip = scannerInt.nextInt();
 					c.setZip(zip);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				case 8:
 					System.out.print(" Enter the new phone number : ");
 					String phone = scannerStr.nextLine();
 					c.setPhoneNumber(phone);
-					System.out.println(c);
+					System.out.println(contactList);
 					break;
 				default:
 					System.out.println("  worng input ");
@@ -123,7 +122,6 @@ public class AddressBook {
 		System.out.print("\n Enter first name to delete contact ");
 		String firstName = scannerStr.nextLine();
 		Iterator<Contact> contactItr = contactList.iterator();
-		Contact c = null;
 		while (contactItr.hasNext()) {
 			if (contactItr.next().getFirstName().equals(firstName)) {
 				contactItr.remove();
@@ -134,7 +132,7 @@ public class AddressBook {
 
 	}
 	public AddressBook addressBookRunner(String name) {
-		
+		System.out.println("\n------- Welcome to "+name+" address Book -------- ");
 		addressBook = new AddressBook();
 		char exit = 'n';
 		while (exit != 'y') {
