@@ -43,18 +43,24 @@ public class AddressBook {
 
 		contact = new Contact(id, firstName, lastName, address, city, state, email, zip, phoneNumber);
 		contactList.add(contact);
-		System.out.println("Contact List :" + contactList);
+		System.out.println("\n Contact List :" + contactList);
 	}
 
 	public void editContact() {
-		System.out.print(" Enter first name to edit contact ");
+		System.out.print("\n Enter first name to edit contact ");
 		String firstName = scannerStr.nextLine();
 		Iterator<Contact> contactItr = contactList.iterator();
 		while (contactItr.hasNext()) {
 			Contact c = contactItr.next();
 			if (c.getFirstName().equals(firstName)) {
-				System.out.println(
-						" Enter 1 to edit firstname \n Enter 2 to edit lastname \n Enter 3 to edit address \n Enter 4 to edit city \n Enter 5 to edit state \n Enter 6 to edit email \n Enter 7 to edit zip \n Enter 8 to edit phone number ");
+				System.out.println("\n Enter 1 to edit firstname "
+						         + "\n Enter 2 to edit lastname "
+						         + "\n Enter 3 to edit address "
+						         + "\n Enter 4 to edit city "
+						         + "\n Enter 5 to edit state "
+						         + "\n Enter 6 to edit email "
+						         + "\n Enter 7 to edit zip "
+						         + "\n Enter 8 to edit phone number ");
 				System.out.println("\n Enter your choice : ");
 				int input = scannerInt.nextInt();
 				switch (input) {
@@ -114,7 +120,7 @@ public class AddressBook {
 	}
 
 	public void deleteContact() {
-		System.out.print(" Enter first name to delete contact ");
+		System.out.print("\n Enter first name to delete contact ");
 		String firstName = scannerStr.nextLine();
 		Iterator<Contact> contactItr = contactList.iterator();
 		Contact c = null;
@@ -124,12 +130,11 @@ public class AddressBook {
 				System.out.println(" -- Contact  Deleted --");
 			}
 		}
-		System.out.println("Contact List :" +contactList);
+		System.out.println(" Contact List :" +contactList);
 
 	}
-
-	public static void main(String[] args) {
-		System.out.println("-----------Welcome to Address Book---------");
+	public AddressBook addressBookRunner(String name) {
+		
 		addressBook = new AddressBook();
 		char exit = 'n';
 		while (exit != 'y') {
@@ -141,24 +146,24 @@ public class AddressBook {
 			int input = scannerInt.nextInt();
 			switch (input) {
 			case 1:
-				System.out.println(" :::::: add Contact :::::: ");
+				System.out.println("\n ::::::::::::::::: add Contact ::::::::::::::::: ");
 				addressBook.addContact();
 				break;
 			case 2:
-				System.out.println(" :::::: edit Contact :::::: ");
+				System.out.println("\n ::::::::::::::::: edit Contact :::::::::::::::: ");
 				addressBook.editContact();
 				break;
 			case 3:
-				System.out.println(" :::::: delete Contact :::::: ");
+				System.out.println("\n ::::::::::::::: delete Contact :::::::::::::::: ");
 				addressBook.deleteContact();
 				break;
 			case 4:
-				System.out.println(" :::::: exit from address book :::::: ");
+				System.out.println("\n ::::::: exit from "+name+" address book ::::::: ");
 				exit = 'y';
 				break;
 			}
 		}
-		System.out.println("exited ");
+		return addressBook;
 	}
 
 }
