@@ -90,7 +90,7 @@ public class Contact {
 												+ " State = " + state + ",\n"
 														+ " Email = " + email + ",\n"
 																+ " Zip = " + zip + ",\n"
-																		+ " PhoneNumber = "+ phoneNumber + "]\n";
+																		+ " PhoneNumber = "+ phoneNumber + "\n";
 	}
 	
 
